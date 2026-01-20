@@ -1,0 +1,56 @@
+GUIA DE IMPORTAÇÃO DE MARCA - ENSINO EM CENA (VERSÃO 2.0)
+
+Para que o site utilize automaticamente as imagens reais, salve os arquivos nas pastas correspondentes com os nomes EXATOS listados abaixo. O sistema prioriza .png, mas funciona com .jpg se necessário.
+
+---
+
+1. LOGOTIPO PRINCIPAL
+   Pasta: /public/assets_marca/logo/
+   Arquivo: logo-principal.png
+
+2. PERSONAGEM FONÊ
+   Pasta: /public/assets_marca/personagens/
+   Arquivo: fone.png
+
+3. SÍMBOLOS ABSTRATOS (Significados)
+   Pasta: /public/assets_marca/elementos/
+   Arquivos:
+     - letra-a.png
+     - estrela.png
+     - circulo.png
+     - livro.png
+     - letra-e.png
+     - exclamacao.png
+
+4. PESSOINHAS (VOGAIS)
+   Pasta: /public/assets_marca/pessoinhas/
+   Arquivos: vogal-a.png, vogal-e.png, vogal-i.png, vogal-o.png, vogal-u.png
+
+---
+
+NOVAS PASTAS (Espetáculos e Equipe):
+
+5. FUNDADORA ROSE GOMES
+   Pasta: /public/assets_marca/rose_gomes/
+   Arquivos:
+     - perfil.png (Foto principal para a página Sobre)
+     - palestra.png (Foto em ação/palestra)
+
+6. ESPETÁCULOS (CAPAS)
+   Pasta: /public/assets_marca/espetaculos/capas/
+   Arquivos (devem corresponder ao 'slug' do espetáculo):
+     - vila-da-fonetica.jpg
+     - portugues-com-classe.jpg
+     - tuco-controle-maluco.jpg
+     - helena-antipoff.jpg
+
+7. ESPETÁCULOS (TÍTULOS/GRAFIAS)
+   Pasta: /public/assets_marca/espetaculos/titulos/
+   Arquivos (Logos dos espetáculos com fundo transparente):
+     - vila-da-fonetica.png
+     - portugues-com-classe.png
+     - tuco-controle-maluco.png
+     - helena-antipoff.png
+
+---
+DICA: Se a imagem não aparecer, verifique se o nome do arquivo está EXATAMENTE igual (minúsculas, hífens).

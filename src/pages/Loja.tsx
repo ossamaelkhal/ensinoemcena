@@ -1,260 +1,165 @@
-import { ShoppingCart, ExternalLink, Package } from 'lucide-react';
+import { ShoppingCart, ExternalLink, Package, Book, Gift } from 'lucide-react';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useCart } from '../context/CartContext';
 
 export default function Loja() {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState('todos');
+  const { addToCart } = useCart(); // Restaurado
 
   const categorias = [
-    { id: 'todos', nome: 'Todos' },
-    { id: 'livro', nome: 'Livros' },
-    { id: 'material', nome: 'Materiais Educativos' },
-    { id: 'brinde', nome: 'Brindes' },
-    { id: 'ingresso', nome: 'Ingressos' },
-    { id: 'kit', nome: 'Kits Escolares' },
+    { id: 'todos', nome: 'Todos', icon: Package },
+    { id: 'livro', nome: 'Livros', icon: Book },
+    { id: 'material', nome: 'Didáticos', icon: ExternalLink },
+    { id: 'brinde', nome: 'Lembranças', icon: Gift },
   ];
 
   const produtos = [
     {
       id: 1,
-      nome: 'Livro Vila da Fonética',
+      nome: 'Livro "Português com Classe"',
       categoria: 'livro',
-      descricao: 'Livro ilustrado com a história do espetáculo, atividades pedagógicas e QR code para conteúdo exclusivo.',
-      preco: 45.00,
-      imagem: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80',
-      estoque: 150,
-      destaque: true,
+      descricao: 'Uma aventura divertida pelas classes gramaticais. Ideal para reforçar o aprendizado em casa ou na escola.',
+      preco: 69.90,
+      imagem: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80',
+      estoque: 120,
+      destaque: true
     },
     {
       id: 2,
-      nome: 'Livro Português com Classe',
-      categoria: 'livro',
-      descricao: 'Guia divertido das classes gramaticais com exercícios interativos e ilustrações criativas.',
-      preco: 42.00,
-      imagem: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=80',
-      estoque: 120,
-      destaque: true,
+      nome: 'Kit Sala de Aula - Fonética',
+      categoria: 'material',
+      descricao: 'Conjunto de cartazes e atividades impressas para trabalhar a Vila da Fonética com turmas de alfabetização.',
+      preco: 149.90,
+      imagem: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80',
+      estoque: 50,
+      destaque: false
     },
     {
       id: 3,
-      nome: 'Caderno de Atividades - Vogais',
-      categoria: 'material',
-      descricao: 'Caderno com atividades lúdicas para trabalhar as vogais com crianças de 4 a 7 anos.',
-      preco: 28.00,
-      imagem: 'https://images.unsplash.com/photo-1517842645767-c639042777db?w=400&q=80',
-      estoque: 200,
-      destaque: false,
+      nome: 'Camiseta "Eu Amo Teatro"',
+      categoria: 'brinde',
+      descricao: 'Camiseta 100% algodão com estampa exclusiva da Ensino em Cena.',
+      preco: 45.00,
+      imagem: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
+      estoque: 100,
+      destaque: false
     },
     {
       id: 4,
-      nome: 'Kit Escolar Completo',
-      categoria: 'kit',
-      descricao: 'Livro + Ingresso + Caderno de Atividades + Brinde especial. Perfeito para escolas!',
-      preco: 95.00,
-      imagem: 'https://images.unsplash.com/photo-1513128034602-7814ccaddd4e?w=400&q=80',
-      estoque: 50,
-      destaque: true,
-    },
-    {
-      id: 5,
-      nome: 'Camiseta Ensino em Cena',
-      categoria: 'brinde',
-      descricao: 'Camiseta 100% algodão com logo da companhia. Disponível em diversos tamanhos.',
-      preco: 55.00,
-      imagem: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80',
-      estoque: 100,
-      destaque: false,
-    },
-    {
-      id: 6,
-      nome: 'Ecobag Vila da Fonética',
-      categoria: 'brinde',
-      descricao: 'Ecobag resistente com ilustração das vogais. Perfeita para carregar livros!',
-      preco: 35.00,
-      imagem: 'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=400&q=80',
-      estoque: 80,
-      destaque: false,
-    },
-    {
-      id: 7,
-      nome: 'Ingresso Individual',
-      categoria: 'ingresso',
-      descricao: 'Ingresso para espetáculo (consulte disponibilidade de datas e espetáculos).',
-      preco: 25.00,
-      imagem: 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=400&q=80',
-      estoque: 500,
-      destaque: false,
-    },
-    {
-      id: 8,
-      nome: 'Material Didático para Professores',
+      nome: 'E-book de Jogos Pedagógicos',
       categoria: 'material',
-      descricao: 'Guia pedagógico completo com planos de aula, atividades e recursos complementares.',
-      preco: 38.00,
-      imagem: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&q=80',
-      estoque: 75,
-      destaque: false,
-    },
+      descricao: 'Arquivo digital com 50 jogos teatrais para sala de aula. Envio imediato por e-mail.',
+      preco: 29.90,
+      imagem: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=600&q=80',
+      estoque: 999,
+      destaque: false
+    }
   ];
 
   const produtosFiltrados = categoriaSelecionada === 'todos'
     ? produtos
     : produtos.filter(p => p.categoria === categoriaSelecionada);
 
-  const whatsappNumber = '5531991873104';
-
-  const handleCompra = (produto: typeof produtos[0]) => {
-    const mensagem = `Olá! Gostaria de comprar: ${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensagem)}`;
-    window.open(whatsappLink, '_blank');
-  };
-
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-[#FFD23F] to-[#FFCA45] py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-[#1A3D7C] mb-6">Nossa Loja</h1>
-            <p className="text-xl text-[#1A3D7C]">
-              Leve um pedacinho da magia para sua escola ou casa
-            </p>
+    <div className="min-h-screen bg-gray-50">
+      <section className="relative bg-[#1A3D7C] py-20 overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <motion.h1 
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="text-4xl md:text-6xl font-bold text-white mb-4"
+          >
+            Lojinha Pedagógica
+          </motion.h1>
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            Recursos didáticos, livros e lembranças para levar a magia do teatro para casa.
+          </p>
+        </div>
+      </section>
+
+      <section className="sticky top-0 z-30 bg-white shadow-sm py-4 border-b border-gray-100">
+        <div className="container mx-auto px-4 overflow-x-auto">
+          <div className="flex justify-center min-w-max gap-4">
+            {categorias.map((categoria) => {
+              const Icon = categoria.icon;
+              return (
+                <button
+                  key={categoria.id}
+                  onClick={() => setCategoriaSelecionada(categoria.id)}
+                  className={`
+                    flex items-center gap-2 px-6 py-2 rounded-full font-semibold transition-all duration-300
+                    ${categoriaSelecionada === categoria.id
+                      ? 'bg-[#1A3D7C] text-white shadow-md transform scale-105' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}
+                  `}
+                >
+                  <Icon size={18} />
+                  {categoria.nome}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="py-8 bg-white border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categorias.map((categoria) => (
-              <button
-                key={categoria.id}
-                onClick={() => setCategoriaSelecionada(categoria.id)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all ${
-                  categoriaSelecionada === categoria.id
-                    ? 'bg-[#1A3D7C] text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                {categoria.nome}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <section className="py-16 container mx-auto px-4">
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <AnimatePresence>
             {produtosFiltrados.map((produto) => (
-              <div
+              <motion.div
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
                 key={produto.id}
-                className={`bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all transform hover:-translate-y-1 ${
-                  produto.destaque ? 'ring-2 ring-[#FFD23F]' : ''
-                }`}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all border border-gray-100 flex flex-col"
               >
-                {produto.destaque && (
-                  <div className="bg-[#FFD23F] text-[#1A3D7C] text-xs font-bold px-3 py-1 text-center">
-                    DESTAQUE
-                  </div>
-                )}
-                <div className="h-48 overflow-hidden bg-gray-200">
+                <div className="relative h-64 overflow-hidden bg-gray-100">
+                  {produto.destaque && (
+                    <span className="absolute top-4 left-4 z-10 bg-[#FFD23F] text-[#1A3D7C] text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                      Mais Vendido
+                    </span>
+                  )}
                   <img
                     src={produto.imagem}
                     alt={produto.nome}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-[#1A3D7C] mb-2 line-clamp-1">
-                    {produto.nome}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                    {produto.descricao}
-                  </p>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-2xl font-bold text-[#FF6B6B]">
-                      R$ {produto.preco.toFixed(2)}
-                    </span>
-                    {produto.estoque > 0 ? (
-                      <span className="text-xs text-green-600 flex items-center">
-                        <Package size={14} className="mr-1" />
-                        Em estoque
-                      </span>
-                    ) : (
-                      <span className="text-xs text-red-600">Esgotado</span>
-                    )}
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                    <button 
+                      onClick={() => addToCart(produto)} // Restaurado
+                      className="bg-white text-[#1A3D7C] px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform"
+                    >
+                      <ShoppingCart size={20} />
+                      Adicionar
+                    </button>
                   </div>
-                  <button
-                    onClick={() => handleCompra(produto)}
-                    disabled={produto.estoque === 0}
-                    className={`w-full py-2 rounded-lg font-semibold transition-colors flex items-center justify-center ${
-                      produto.estoque > 0
-                        ? 'bg-[#1A3D7C] text-white hover:bg-[#17386D]'
-                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                    }`}
-                  >
-                    <ShoppingCart size={18} className="mr-2" />
-                    Comprar via WhatsApp
-                  </button>
                 </div>
-              </div>
+
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-lg font-bold text-[#1A3D7C] mb-2 leading-tight">{produto.nome}</h3>
+                  <p className="text-gray-500 text-sm mb-4 flex-grow line-clamp-3">{produto.descricao}</p>
+                  <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <div className="flex flex-col">
+                      <span className="text-xs text-gray-400 uppercase font-bold">Preço</span>
+                      <span className="text-2xl font-bold text-[#1A3D7C]">R$ {produto.preco.toFixed(2).replace('.', ',')}</span>
+                    </div>
+                    <button 
+                      onClick={() => addToCart(produto)}
+                      className="w-10 h-10 rounded-full bg-[#1A3D7C] flex items-center justify-center text-white hover:bg-[#FFD23F] hover:text-[#1A3D7C] transition-colors"
+                    >
+                      <ShoppingCart size={20} />
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#7A3EB1] to-[#1A3D7C] rounded-xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Compras para Escolas</h2>
-            <p className="text-lg mb-6">
-              Oferecemos condições especiais para compras em quantidade. Entre em contato para solicitar orçamento personalizado!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Gostaria de um orçamento para compra escolar')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-[#FFD23F] text-[#1A3D7C] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFCA45] transition-colors"
-              >
-                <ExternalLink size={20} className="mr-2" />
-                Solicitar Orçamento
-              </a>
-              <a
-                href="mailto:ensinoemcena@gmail.com"
-                className="inline-flex items-center justify-center bg-white text-[#1A3D7C] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Enviar E-mail
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-[#1A3D7C] mb-6">
-              Formas de Pagamento
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Aceitamos diversas formas de pagamento para sua comodidade:
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white rounded-lg p-4 shadow">
-                <p className="font-semibold text-[#1A3D7C]">PIX</p>
-              </div>
-              <div className="bg-white rounded-lg p-4 shadow">
-                <p className="font-semibold text-[#1A3D7C]">Boleto</p>
-              </div>
-              <div className="bg-white rounded-lg p-4 shadow">
-                <p className="font-semibold text-[#1A3D7C]">Cartão</p>
-              </div>
-              <div className="bg-white rounded-lg p-4 shadow">
-                <p className="font-semibold text-[#1A3D7C]">Transferência</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          </AnimatePresence>
+        </motion.div>
       </section>
     </div>
   );

@@ -1,140 +1,102 @@
-export default function Elenco() {
-  const elenco = [
-    {
-      id: 1,
-      nome: 'Rose Gomes',
-      foto: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
-      especialidades: ['Direção Artística', 'Dramaturgia', 'Atuação'],
-      biografia: 'Fundadora do Ensino em Cena. Professora de Língua Portuguesa com mais de 15 anos de experiência em teatro educativo. Responsável pela criação e direção de todos os espetáculos da companhia.',
-    },
-    {
-      id: 2,
-      nome: 'Carlos Mendes',
-      foto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
-      especialidades: ['Atuação', 'Música', 'Canto'],
-      biografia: 'Ator e músico com formação em Artes Cênicas. Participa dos espetáculos desde 2018, trazendo versatilidade e carisma para diversos personagens.',
-    },
-    {
-      id: 3,
-      nome: 'Juliana Santos',
-      foto: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
-      especialidades: ['Atuação', 'Dança', 'Expressão Corporal'],
-      biografia: 'Atriz e bailarina formada pela Escola de Teatro. Especialista em trabalhar com público infantil, conectando-se profundamente com os estudantes.',
-    },
-    {
-      id: 4,
-      nome: 'Pedro Alves',
-      foto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
-      especialidades: ['Atuação', 'Direção', 'Produção'],
-      biografia: 'Ator e diretor teatral com ampla experiência em teatro educativo. Contribui tanto nos palcos quanto na produção dos espetáculos.',
-    },
-    {
-      id: 5,
-      nome: 'Mariana Costa',
-      foto: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80',
-      especialidades: ['Atuação', 'Voz', 'Caracterização'],
-      biografia: 'Atriz profissional com talento especial para criar personagens memoráveis. Sua versatilidade vocal encanta plateias de todas as idades.',
-    },
-    {
-      id: 6,
-      nome: 'Rafael Lima',
-      foto: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80',
-      especialidades: ['Atuação', 'Acrobacia', 'Palhaçaria'],
-      biografia: 'Ator circense e palhaço formado pela Escola Nacional de Circo. Traz energia e humor para os espetáculos, conquistando o público infantil.',
-    },
-  ];
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { RotateCw, Star } from 'lucide-react';
+import { DataService } from '../services/dataService';
+import { MembroElenco } from '../types/schema';
+
+const CardElenco = ({ membro }: { membro: MembroElenco }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-[#7A3EB1] to-[#FF6B6B] text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">Nosso Elenco</h1>
-            <p className="text-xl text-gray-100">
-              Nossos artistas são educadores que encantam, inspiram e transformam
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {elenco.map((membro) => (
-              <div
-                key={membro.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2"
-              >
-                <div className="h-64 overflow-hidden bg-[#1A3D7C]">
-                  <img
-                    src={membro.foto}
-                    alt={membro.nome}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-[#1A3D7C] mb-2">
-                    {membro.nome}
-                  </h3>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {membro.especialidades.map((esp, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-[#FFD23F] text-[#1A3D7C] text-sm font-semibold rounded-full"
-                      >
-                        {esp}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">{membro.biografia}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-[#1A3D7C] mb-8">
-              Bastidores
-            </h2>
-            <div className="bg-white rounded-xl shadow-md p-8">
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Além dos artistas em cena, contamos com uma equipe técnica dedicada que trabalha nos bastidores para garantir a qualidade de cada apresentação. De figurinistas a técnicos de som e luz, cada profissional contribui para criar a magia do Ensino em Cena.
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="h-48 bg-gray-200 rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=80"
-                    alt="Bastidores 1"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="h-48 bg-gray-200 rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
-                    alt="Bastidores 2"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="h-48 bg-gray-200 rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80"
-                    alt="Bastidores 3"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="h-48 bg-gray-200 rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1516575114784-7abf2c36b18f?w=400&q=80"
-                    alt="Bastidores 4"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+    <div 
+      className="h-[420px] w-full perspective-1000 cursor-pointer group"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <motion.div
+        className="relative w-full h-full preserve-3d transition-transform duration-700 shadow-xl rounded-2xl"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+      >
+        {/* FRENTE */}
+        <div className="absolute inset-0 backface-hidden bg-white rounded-2xl overflow-hidden border-2 border-transparent hover:border-[#FFD23F] transition-colors">
+          <div className="h-3/5 overflow-hidden relative">
+             <div className="absolute inset-0 bg-gradient-to-t from-[#1A3D7C]/80 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"/>
+             <img src={membro.foto} alt={membro.nome} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div className="absolute bottom-3 right-3 z-20 bg-white/20 backdrop-blur-md p-2 rounded-full text-white">
+                <RotateCw size={20} />
             </div>
+          </div>
+          <div className="p-6 h-2/5 flex flex-col justify-between bg-white">
+            <div>
+              <h3 className="text-2xl font-bold text-[#1A3D7C]">{membro.nome}</h3>
+              <p className="text-sm text-[#7A3EB1] font-medium mb-3">{membro.funcao || 'Artista & Educador'}</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {membro.especialidades?.slice(0, 3).map((esp, i) => (
+                <span key={i} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md">{esp}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* VERSO */}
+        <div 
+          className="absolute inset-0 backface-hidden bg-gradient-to-br from-[#1A3D7C] to-[#7A3EB1] rounded-2xl text-white p-8 flex flex-col items-center justify-center text-center rotate-y-180 border-4 border-[#FFD23F]"
+          style={{ transform: 'rotateY(180deg)' }}
+        >
+          <div className="mb-4 bg-white/10 p-4 rounded-full">
+            <Star className="text-[#FFD23F] w-8 h-8" />
+          </div>
+          <h4 className="text-xl font-bold mb-4 text-[#FFD23F]">Sobre o Artista</h4>
+          <p className="text-sm leading-relaxed text-gray-100 mb-6">"{membro.biografia}"</p>
+          <button className="text-xs font-bold uppercase tracking-widest text-[#FFD23F]">Voltar</button>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default function Elenco() {
+  const [elenco, setElenco] = useState<MembroElenco[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const load = async () => {
+      const data = await DataService.getElenco();
+      setElenco(data);
+      setLoading(false);
+    };
+    load();
+  }, []);
+
+  if (loading) return <div className="min-h-screen flex items-center justify-center text-[#1A3D7C]">Carregando artistas...</div>;
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <section className="bg-gradient-to-br from-[#1A3D7C] to-[#0f244a] text-white py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Nosso Elenco</h1>
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto font-light">
+              Conheça os artistas-educadores que transformam o palco em sala de aula.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 -mt-10">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {elenco.map((membro, index) => (
+              <motion.div
+                key={membro.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <CardElenco membro={membro} />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
