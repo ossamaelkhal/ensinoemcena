@@ -6,7 +6,7 @@ export default function Palestras() {
   const palestras = [
     {
       id: 1,
-      titulo: "Desenvolvimento de Habilidades Criativas",
+      titulo: "Desenvolvimento de habilidades criativas",
       publico: "Educadores",
       icon: Lightbulb,
       cor: "text-[#FFD23F]",
@@ -16,7 +16,7 @@ export default function Palestras() {
     },
     {
       id: 2,
-      titulo: "Desenvolvimento Emocional e Consciência Corporativa",
+      titulo: "Desenvolvimento emocional e consciência corporativa",
       publico: "Servidores da Educação",
       icon: Heart,
       cor: "text-[#FF6B6B]",
@@ -26,7 +26,7 @@ export default function Palestras() {
     },
     {
       id: 3,
-      titulo: "Gestão Familiar e Habilidades Emocionais",
+      titulo: "Gestão familiar e habilidades emocionais",
       publico: "Pais e Responsáveis",
       icon: Users,
       cor: "text-[#7A3EB1]",
@@ -36,7 +36,7 @@ export default function Palestras() {
     },
     {
       id: 4,
-      titulo: "Habilidades Criativas em Sala de Aula",
+      titulo: "Habilidades criativas em sala de aula",
       publico: "Educadores (Foco Prático)",
       icon: Mic2,
       cor: "text-[#1A3D7C]",
@@ -46,7 +46,7 @@ export default function Palestras() {
     },
     {
       id: 5,
-      titulo: "Habilidades Socioemocionais para Gestores",
+      titulo: "Habilidades socioemocionais para gestores",
       publico: "Gestores Educacionais",
       icon: Users,
       cor: "text-[#7A3EB1]",
@@ -56,7 +56,7 @@ export default function Palestras() {
     },
     {
       id: 6,
-      titulo: "O Poder de Ser Quem Sou!",
+      titulo: "O poder de ser quem sou!",
       publico: "Público Geral / Alunos",
       icon: Star,
       cor: "text-[#FFD23F]",
@@ -78,16 +78,16 @@ export default function Palestras() {
             className="inline-flex items-center gap-2 bg-[#FFD23F]/20 border border-[#FFD23F] rounded-full px-4 py-1 text-[#FFD23F] text-sm font-bold mb-6"
           >
             <Mic2 size={16} />
-            <span>Formação e Desenvolvimento</span>
+            <span>Formação e desenvolvimento</span>
           </motion.div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Nossas Palestras</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Nossas palestras</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Conteúdo transformador para educadores, gestores e famílias. Levamos conhecimento e reflexão para sua comunidade escolar.
           </p>
         </div>
       </section>
 
-      {/* Lista de Palestras */}
+      {/* Lista de palestras */}
       <section className="py-20 container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {palestras.map((palestra, idx) => {
@@ -135,7 +135,7 @@ export default function Palestras() {
                     className={`w-full py-3 rounded-xl border-2 font-bold text-center flex items-center justify-center gap-2 transition-colors
                       border-gray-200 text-gray-600 hover:border-[#1A3D7C] hover:text-[#1A3D7C]`}
                   >
-                    Contratar Palestra
+                    Contratar palestra
                     <ArrowRight size={18} />
                   </Link>
                 </div>
@@ -153,7 +153,7 @@ export default function Palestras() {
             Podemos adaptar o conteúdo das palestras de acordo com a realidade e necessidade da sua instituição.
           </p>
           <Link to="/contato" className="bg-[#FFD23F] text-[#1A3D7C] px-8 py-3 rounded-full font-bold hover:bg-[#FFCA45] transition-colors shadow-lg">
-            Fale com um Consultor
+            Fale com um consultor
           </Link>
         </div>
       </section>

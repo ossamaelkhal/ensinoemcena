@@ -38,7 +38,7 @@ export default function Ferramentas() {
       <section className="bg-[#1A3D7C] pt-20 pb-32 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Sala de Recursos Digitais</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Sala de recursos digitais</h1>
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
             Tecnologia e criatividade para facilitar sua rotina em sala de aula.
           </p>
@@ -50,14 +50,14 @@ export default function Ferramentas() {
               className={`px-6 py-3 rounded-full font-bold transition-all flex items-center gap-2 ${activeTab === 'ia' ? 'bg-[#FFD23F] text-[#1A3D7C] shadow-lg transform scale-105' : 'bg-white/10 text-white hover:bg-white/20'}`}
             >
               <Brain size={20} />
-              IA Planejadora
+              IA planejadora
             </button>
             <button 
               onClick={() => setActiveTab('recursos')}
               className={`px-6 py-3 rounded-full font-bold transition-all flex items-center gap-2 ${activeTab === 'recursos' ? 'bg-[#FFD23F] text-[#1A3D7C] shadow-lg transform scale-105' : 'bg-white/10 text-white hover:bg-white/20'}`}
             >
               <Grid size={20} />
-              Materiais para Imprimir
+              Materiais para imprimir
             </button>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function Ferramentas() {
                         />
                     </div>
                     <button type="submit" className="w-full bg-[#1A3D7C] text-white font-bold py-4 rounded-xl hover:bg-[#17386D] flex items-center justify-center gap-2">
-                        <Sparkles size={20} /> Gerar Plano Mágico
+                        <Sparkles size={20} /> Gerar plano mágico
                     </button>
                 </form>
               )}
@@ -118,7 +118,7 @@ export default function Ferramentas() {
               {step === 3 && (
                 <div className="p-8 md:p-12">
                     <div className="flex items-center gap-2 mb-6 text-green-600 font-bold bg-green-50 p-3 rounded-lg w-fit">
-                        <CheckCircle size={20} /> Plano Gerado com Sucesso!
+                        <CheckCircle size={20} /> Plano gerado com sucesso!
                     </div>
                     <h2 className="text-2xl font-bold text-[#1A3D7C] mb-2">Aula: {formData.tema}</h2>
                     <p className="text-gray-500 mb-6">Sugestão lúdica baseada no teatro pedagógico.</p>
@@ -137,7 +137,7 @@ export default function Ferramentas() {
                     <div className="bg-[#FFD23F]/10 border border-[#FFD23F] p-6 rounded-xl text-center">
                         <p className="text-[#1A3D7C] font-bold mb-2">Quer levar essa experiência para o palco?</p>
                         <p className="text-sm text-gray-600 mb-4">A Ensino em Cena tem um espetáculo profissional sobre este universo.</p>
-                        <a href="/espetaculos" className="inline-block bg-[#1A3D7C] text-white px-6 py-2 rounded-lg font-bold hover:bg-[#17386D]">Ver Catálogo</a>
+                        <a href="/espetaculos" className="inline-block bg-[#1A3D7C] text-white px-6 py-2 rounded-lg font-bold hover:bg-[#17386D]">Ver catálogo</a>
                     </div>
                 </div>
               )}
@@ -167,7 +167,7 @@ export default function Ferramentas() {
                     <div className="bg-gradient-to-br from-[#7A3EB1] to-[#5a2d82] p-6 rounded-2xl shadow-lg text-white flex flex-col justify-center text-center">
                         <h3 className="font-bold text-lg mb-2">Quer mais?</h3>
                         <p className="text-sm text-purple-200 mb-4">Assine nossa newsletter e receba atividades mensais.</p>
-                        <button className="bg-[#FFD23F] text-[#1A3D7C] font-bold py-2 rounded-lg hover:bg-[#FFCA45]">Cadastrar Grátis</button>
+                        <button className="bg-[#FFD23F] text-[#1A3D7C] font-bold py-2 rounded-lg hover:bg-[#FFCA45]">Cadastrar grátis</button>
                     </div>
                 </div>
             </motion.div>

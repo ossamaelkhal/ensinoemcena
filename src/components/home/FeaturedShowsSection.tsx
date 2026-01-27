@@ -20,10 +20,10 @@ export default function FeaturedShowsSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-[#7A3EB1] font-bold tracking-wider uppercase text-sm">Nosso Repertório</span>
-          <h2 className="text-4xl font-bold text-[#1A3D7C] mt-2">Espetáculos que Ensinam</h2>
+          <span className="text-[#7A3EB1] font-bold tracking-wider uppercase text-sm">Nosso repertório</span>
+          <h2 className="text-4xl font-bold text-[#1A3D7C] mt-2">Espetáculos que ensinam</h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Peças teatrais desenvolvidas com rigor pedagógico e qualidade artística para diferentes faixas etárias.
+            Peças teatrais desenvolvidas com rigor didático pedagógico e qualidade artística para diferentes faixas etárias.
           </p>
         </div>
 
@@ -61,14 +61,14 @@ export default function FeaturedShowsSection() {
                 </div>
 
                 <p className="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed flex-grow">
-                  {espetaculo.sinopseCurta}
+                  Uma aventura lúdica na qual vogais e consoantes enfrentam traças para salvarem a literatura
                 </p>
                 
                 <Link
                   to={`/espetaculos/${espetaculo.slug}`}
                   className="w-full inline-flex items-center justify-center gap-2 bg-gray-50 hover:bg-[#1A3D7C] text-[#1A3D7C] hover:text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 group-hover:translate-x-1"
                 >
-                  Ver Detalhes <ChevronRight size={18} />
+                  Ver detalhes <ChevronRight size={18} />
                 </Link>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function FeaturedShowsSection() {
              to="/espetaculos"
              className="inline-block border-2 border-[#1A3D7C] text-[#1A3D7C] px-8 py-3 rounded-full font-bold hover:bg-[#1A3D7C] hover:text-white transition-all"
           >
-            Ver Todos os Espetáculos
+            Ver todos os espetáculos
           </Link>
         </div>
       </div>

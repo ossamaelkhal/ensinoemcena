@@ -89,7 +89,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-6 py-2 text-[#FFD23F] text-xs md:text-sm font-bold mb-8 shadow-2xl tracking-[0.2em] uppercase"
         >
           <Sparkles size={14} />
-          <span>Excelência em Teatro Pedagógico</span>
+          <span>Excelência em teatro pedagógico</span>
         </motion.div>
 
         <motion.h1 
@@ -98,9 +98,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-[1.1] tracking-tight drop-shadow-xl"
         >
-          Onde a educação <br />
+          Aqui, o aprendizado é <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD23F] via-[#FFE5A0] to-[#FFD23F]">
-            ganha vida
+            um espetáculo
           </span>
         </motion.h1>
 
@@ -110,9 +110,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
         >
-          Transforme o currículo escolar em uma experiência inesquecível.
+          Transforme o aprender em uma experiência divertida e memorável.
           <br className="hidden md:block" />
-          Arte, emoção e BNCC no mesmo palco.
+          Arte, emoção e encantamento no mesmo palco.
         </motion.p>
 
         <motion.div 
@@ -127,7 +127,7 @@ export default function HeroSection() {
           >
             <span className="relative z-10 flex items-center justify-center gap-3">
               <MessageCircle size={20} strokeWidth={2.5} />
-              Solicitar Orçamento
+              Solicitar orçamento
             </span>
             <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 ease-in-out skew-x-12" />
           </Link>
@@ -137,7 +137,7 @@ export default function HeroSection() {
             className="group px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-full font-bold text-lg hover:bg-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-3 w-full sm:w-auto text-center"
           >
             <PlayCircle size={20} className="text-[#FFD23F] group-hover:scale-110 transition-transform" />
-            Ver Catálogo
+            Ver catálogo
           </Link>
         </motion.div>
 

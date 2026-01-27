@@ -11,7 +11,7 @@ export default function Blog() {
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('Todos');
 
-  const categories = ['Todos', 'Gestão Escolar', 'Dicas Pedagógicas', 'Novidades', 'Bastidores'];
+  const categories = ['Todos', 'Gestão escolar', 'Dicas pedagógicas', 'Novidades', 'Bastidores'];
 
   useEffect(() => {
     const load = async () => {

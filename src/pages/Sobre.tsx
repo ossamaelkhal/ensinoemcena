@@ -67,11 +67,11 @@ export default function Sobre() {
 
             <div className="md:w-2/3 space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold text-[#1A3D7C] leading-tight">
-                A Magia por trás da cortina
+                A magia por trás da cortina
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  A <strong>Ensino em Cena®</strong> é a materialização do sonho da professora <strong>Rose Gomes</strong>. Unindo a precisão da Língua Portuguesa com a liberdade do Teatro, ela criou uma metodologia onde as vogais têm personalidade e a gramática tem humor.
+                  A <strong>Ensino em Cena®</strong> é a materialização do sonho da professora <strong>Rose Gomes</strong> que une a precisão da Língua Portuguesa com a liberdade do teatro. Ela criou uma metodologia na qual as vogais têm personalidade e a gramática tem humor.
                 </p>
                 <p>
                   Nossa missão é transformar o processo de aprendizagem em uma experiência significativa, lúdica e memorável, utilizando a linguagem teatral como ferramenta pedagógica para promover o desenvolvimento integral de crianças e adolescentes.
@@ -127,7 +127,7 @@ export default function Sobre() {
             </div>
             <div className="flex flex-col items-center text-center group">
               <ElementExclamation className="w-10 h-20 text-[#7A3EB1] mb-4 group-hover:scale-110 transition-transform" />
-              <h4 className="font-bold text-white text-lg">Missão Única</h4>
+              <h4 className="font-bold text-white text-lg">Missão única</h4>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function Sobre() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl font-bold text-[#1A3D7C] mb-6">Além dos Espetáculos</h2>
+            <h2 className="text-4xl font-bold text-[#1A3D7C] mb-6">Além dos espetáculos</h2>
             <p className="text-xl text-gray-600">Clique nos itens abaixo para conhecer nosso catálogo completo.</p>
           </div>
 

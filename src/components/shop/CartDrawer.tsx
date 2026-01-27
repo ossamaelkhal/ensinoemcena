@@ -27,7 +27,7 @@ export default function CartDrawer() {
           >
             {/* Header */}
             <div className="flex justify-between items-center p-6 border-b">
-              <h2 className="text-2xl font-bold text-[#1A3D7C]">Meu Carrinho</h2>
+              <h2 className="text-2xl font-bold text-[#1A3D7C]">Meu carrinho</h2>
               <button onClick={toggleCart} className="p-2 rounded-full hover:bg-gray-100">
                 <X />
               </button>
@@ -39,7 +39,7 @@ export default function CartDrawer() {
                 <div className="text-center py-20">
                   <p className="text-gray-500">Seu carrinho está vazio.</p>
                   <Link to="/loja" onClick={toggleCart} className="mt-4 inline-block bg-[#1A3D7C] text-white font-bold py-2 px-6 rounded-full">
-                    Ver Produtos
+                    Ver produtos
                   </Link>
                 </div>
               ) : (
@@ -57,7 +57,7 @@ export default function CartDrawer() {
                         <span>R$ {cartTotal.toFixed(2)}</span>
                     </div>
                     <Link to="/checkout" onClick={toggleCart} className="w-full block text-center bg-[#FFD23F] text-[#1A3D7C] font-bold py-3 px-6 rounded-full text-lg hover:bg-yellow-400 transition-all">
-                        Finalizar Compra
+                        Finalizar compra
                     </Link>
                 </div>
             )}

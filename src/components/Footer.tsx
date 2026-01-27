@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-[#FFD23F] font-bold text-xl mb-4">
-              Ensino em Cena®
+              Ensino em cena®
             </h3>
             <p className="text-sm text-gray-300 mb-6">
               Aqui, o aprender é um espetáculo.
@@ -43,7 +43,7 @@ export default function Footer() {
               className="inline-flex items-center gap-2 text-xs font-bold text-[#1A3D7C] bg-[#FFD23F] px-3 py-1.5 rounded hover:bg-[#FFCA45] transition-colors"
             >
               <Handshake size={14} />
-              Área do Investidor
+              Área do investidor
             </Link>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-4">Fale Conosco</h4>
+            <h4 className="font-semibold text-lg mb-4">Fale conosco</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-2">
                 <Mail size={16} className="text-[#FFD23F]" />
@@ -71,6 +71,12 @@ export default function Footer() {
                 <Phone size={16} className="text-[#FFD23F]" />
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD23F] transition-colors">
                   (31) 99673-9694
+                </a>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Phone size={16} className="text-[#FFD23F]" />
+                <a href="https://wa.me/5531991873104" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD23F] transition-colors">
+                  (31) 99187-3104 (Rose Gomes)
                 </a>
               </li>
             </ul>

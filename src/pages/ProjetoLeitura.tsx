@@ -10,50 +10,50 @@ export default function ProjetoLeitura() {
   const etapas = [
     {
       etapa: 1,
-      titulo: "O Despertar do Educador",
+      titulo: "O despertar do educador",
       publico: "Professores",
       icon: Lightbulb,
-      descricao: "Tudo começa com quem ensina. Realizamos uma palestra de reprogramação emocional e habilidades criativas, resgatando o ânimo e a visibilidade do professor diante da escola, dos pais e da sociedade.",
+      descricao: "Tudo começa com quem ensina. Realizamos uma palestra de reprogramação emocional e sugestão de habilidades criativas, a fim de resgatar o ânimo e a visibilidade do professor.",
       detalhe: "Foco na valorização humana do docente."
     },
     {
       etapa: 2,
-      titulo: "A Vila da Fonética (Imaginação)",
+      titulo: "A Vila da Fonética (imaginação)",
       publico: "Alunos (Fund. I)",
       icon: Brain,
-      descricao: "No primeiro encontro com as crianças, não mostramos imagens. Narramos a história da 'Vila da Fonética' e descrevemos a casa de cada vogal para reativar o poder da imaginação que tem se perdido nas telas.",
+      descricao: "No primeiro encontro com as crianças não mostramos imagens, narramos a história da 'Vila da Fonética' e descrevemos a casa de cada vogal para reativar o poder da imaginação que tem se perdido pelo uso excessivo de telas.",
       detalhe: "Estimulação auditiva e criativa pura."
     },
     {
       etapa: 3,
-      titulo: "Experiência Sensorial",
+      titulo: "Experiência sensorial",
       publico: "Alunos",
       icon: Sparkles,
-      descricao: "Trabalhamos a memória e os sentidos. Levamos referências reais de cada vogal para a sala de aula, criando conexões neurais poderosas.",
+      descricao: "Trabalhamos a memória e os sentidos, pois levamos referências reais de cada vogal para a sala de aula, criando conexões neurais poderosas.",
       itens: ["Cheiro de Alfazema (A)", "Folha de Espinafre (E)", "Íris/Flor (I)", "Cheiro de Orégano (O)", "Uva para degustar (U)"]
     },
     {
       etapa: 4,
-      titulo: "A Revelação e a Leitura",
+      titulo: "A revelação e a leitura",
       publico: "Alunos",
       icon: BookOpen,
-      descricao: "Revelamos as imagens das casas (confrontando com o que imaginaram) e realizamos a 'Dinâmica do Balão' com palavras. Incentivamos a leitura ao microfone, transformando o ato de ler em um evento.",
+      descricao: "Revelamos as imagens das casas confrontando com o que imaginaram. Realizamos várias dinâmicas para uma interação divertida sobre a formação de sílabas. Incentivamos a leitura ao microfone, transformando o ato de ler em um evento.",
       detalhe: "70-80% da turma participa ativamente da leitura."
     },
     {
       etapa: 5,
-      titulo: "Protagonismo no Pátio",
-      publico: "Alunos Artistas",
+      titulo: "Protagonismo no pátio",
+      publico: "Alunos artistas",
       icon: Users,
-      descricao: "Selecionamos e ensaiamos 7 alunos para encenarem uma adaptação da peça para os colegas no pátio. Eles vivenciam a diferença entre gênero narrativo e dramático na prática.",
+      descricao: "Convidamos e ensaiamos alguns alunos para encenarem uma adaptação da peça para os colegas no pátio. Assim, eles vivenciam a diferença entre gênero narrativo e dramático na prática.",
       detalhe: "Apresentações para toda a escola."
     },
     {
       etapa: 6,
-      titulo: "A Culminância no Teatro",
-      publico: "Escola Completa",
+      titulo: "A culminância no teatro",
+      publico: "Escola completa",
       icon: Theater,
-      descricao: "O grande dia! Levamos a escola ao teatro para assistir à peça profissional 'Vila da Fonética'. Com iluminação, atores e magia, consolidamos o aprendizado das oxítonas, paroxítonas e separação de sílabas.",
+      descricao: "Chegou o grande dia! Recbemos a escola no teatro para assistir à peça profissional 'Vila da Fonética'. Nesse momento, os estudantes convivem com iluminação, sonoplastia, os atores e magia do teatro, onde se é consolidado o aprendizado das oxítonas, paroxítonas, paroxítonas e separação de sílabas.",
       detalhe: "Olhos brilhando e interação total."
     }
   ];
@@ -71,7 +71,7 @@ export default function ProjetoLeitura() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-block bg-[#FFD23F] text-[#1A3D7C] px-4 py-1 rounded-full font-bold text-sm mb-6"
           >
-            Metodologia Exclusiva Rose Gomes
+            Metodologia exclusiva Rose Gomes
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -79,7 +79,7 @@ export default function ProjetoLeitura() {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           >
-            Projeto de Leitura e Escrita <br/>
+            Projeto de leitura e escrita <br/>
             <span className="text-[#FFD23F]">Da Imaginação ao Palco</span>
           </motion.h1>
           <motion.p 
@@ -175,10 +175,10 @@ export default function ProjetoLeitura() {
                 <div className="bg-[#FFD23F] p-4 rounded-full text-[#1A3D7C]">
                   <Heart size={32} />
                 </div>
-                <h2 className="text-3xl font-bold">Resgate da Família</h2>
+                <h2 className="text-3xl font-bold">Resgate da família</h2>
               </div>
               <p className="text-lg text-blue-100 mb-6 leading-relaxed">
-                Após o espetáculo, realizamos uma roda de conversa afetiva com os pais. O objetivo é resgatar a responsabilidade parental na era tecnológica. Discutimos a importância da presença, do afeto e do limite no uso de telas.
+                Após o término do projeto, realizamos uma roda de conversa afetiva com os pais dos estudantes. O objetivo é resgatar a responsabilidade parental na era tecnológica, discutindo a importância da presença, do afeto e do limite no uso de telas.
               </p>
               <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border-l-4 border-[#FFD23F]">
                 <p className="italic text-gray-200">
@@ -192,7 +192,7 @@ export default function ProjetoLeitura() {
                 <div className="bg-[#1A3D7C] p-4 rounded-full text-white">
                   <Download size={24} />
                 </div>
-                <h2 className="text-2xl font-bold text-[#1A3D7C]">O Legado para a Escola</h2>
+                <h2 className="text-2xl font-bold text-[#1A3D7C]">O Legado para a escola</h2>
               </div>
               <p className="text-gray-600 mb-6">
                 O projeto não acaba quando vamos embora. Deixamos um material rico para que os professores continuem o trabalho:
@@ -228,13 +228,13 @@ export default function ProjetoLeitura() {
             Quer transformar a alfabetização na sua escola?
           </h2>
           <p className="text-[#1A3D7C] text-xl mb-10 max-w-2xl mx-auto">
-            Leve o Projeto de Leitura e Escrita da Professora Rose Gomes para seus alunos e veja os olhinhos brilharem.
+            Leve o Projeto de Leitura e Escrita da Professora Rose Gomes para seus alunos e veja os olhinhos deles brilharem.
           </p>
           <Link 
             to="/contato"
             className="inline-flex items-center gap-3 bg-[#1A3D7C] text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-[#17386D] hover:scale-105 transition-all shadow-xl"
           >
-            Agendar Projeto Agora
+            Agendar projeto agora
             <ArrowRight />
           </Link>
         </div>

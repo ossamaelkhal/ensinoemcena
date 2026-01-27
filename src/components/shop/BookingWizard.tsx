@@ -43,13 +43,13 @@ export default function BookingWizard() {
         tipo: selection.perfil === 'escola' ? 'escola' : 'responsavel',
         interesse: `${selection.motivo} - ${selection.faixaEtaria}`,
         mensagem: `Lead via Wizard:\nCargo: ${selection.cargo}\nPlateia: ${selection.tamanhoTurma}\nMotivo: ${selection.motivo}`,
-        origem: 'Assistente de Agendamento', // Adiciona a origem do lead
+        origem: 'Assistente de agendamento', // Adiciona a origem do lead
     });
 
     setTimeout(() => {
         setLoading(false);
         // Mensagem super estruturada para o comercial já saber tudo
-        const msg = `*Novo Diagnóstico do Site* 🎭\n\n` +
+        const msg = `*Novo diagnóstico do site* 🎭\n\n` +
                     `👤 *Nome:* ${selection.nome}\n` +
                     `🏫 *Instituição:* ${selection.escola} (${selection.cargo})\n` +
                     `🎯 *Objetivo:* ${selection.motivo}\n` +
@@ -124,14 +124,14 @@ export default function BookingWizard() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-lg mx-auto">
                         <OptionCard 
                             icon={School} 
-                            title="Represento uma Escola" 
-                            subtitle="Gestor, Coordenação ou Professor"
+                            title="Represento uma escola" 
+                            subtitle="Gestor, coordenação ou professor"
                             onClick={() => handleNext('perfil', 'escola')} 
                         />
                         <OptionCard 
                             icon={User} 
-                            title="Particular / Família" 
-                            subtitle="Pais, Eventos ou Grupos"
+                            title="Particular / família" 
+                            subtitle="Pais, eventos ou grupos"
                             onClick={() => handleNext('perfil', 'familia')} 
                             color="purple"
                         />
@@ -148,12 +148,12 @@ export default function BookingWizard() {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {[
-                            { id: 'projeto', label: 'Projeto Literário', icon: Sparkles },
-                            { id: 'datas', label: 'Data Comemorativa', icon: Calendar },
-                            { id: 'passeio', label: 'Passeio Escolar (Teatro)', icon: BusIcon }, // Ícone customizado abaixo
-                            { id: 'familia', label: 'Dia da Família', icon: Users },
-                            { id: 'pedagogico', label: 'Reforço Pedagógico', icon: GraduationCap },
-                            { id: 'outro', label: 'Outro Motivo', icon: MessageSquare },
+                            { id: 'projeto', label: 'Projeto literário', icon: Sparkles },
+                            { id: 'datas', label: 'Data comemorativa', icon: Calendar },
+                            { id: 'passeio', label: 'Passeio escolar (teatro)', icon: BusIcon }, // Ícone customizado abaixo
+                            { id: 'familia', label: 'Dia da família', icon: Users },
+                            { id: 'pedagogico', label: 'Reforço pedagógico', icon: GraduationCap },
+                            { id: 'outro', label: 'Outro motivo', icon: MessageSquare },
                         ].map(opt => (
                             <OptionCard 
                                 key={opt.id}
@@ -176,7 +176,7 @@ export default function BookingWizard() {
                     
                     <div className="space-y-6">
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-3">Faixa Etária Predominante</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Faixa etária predominante</label>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                                 {['Infantil (2-5)', 'Fund. I (6-10)', 'Fund. II (11-14)', 'Misto'].map(age => (
                                     <button 
@@ -191,7 +191,7 @@ export default function BookingWizard() {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-3">Estimativa de Público</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Estimativa de público</label>
                             <div className="grid grid-cols-3 gap-2">
                                 {['Até 50', '50 a 150', '+ de 150'].map(size => (
                                     <button 
@@ -233,7 +233,7 @@ export default function BookingWizard() {
                                 required
                                 name="nome"
                                 type="text" 
-                                placeholder="Seu Nome Completo"
+                                placeholder="Seu nome completo"
                                 className="w-full pl-10 p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1A3D7C] outline-none transition-all"
                                 onChange={handleInput}
                             />
@@ -247,7 +247,7 @@ export default function BookingWizard() {
                                         required
                                         name="escola"
                                         type="text" 
-                                        placeholder="Nome da Escola"
+                                        placeholder="Nome da escola"
                                         className="w-full pl-10 p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1A3D7C] outline-none transition-all"
                                         onChange={handleInput}
                                     />
@@ -258,7 +258,7 @@ export default function BookingWizard() {
                                         required
                                         name="cargo"
                                         type="text" 
-                                        placeholder="Seu Cargo"
+                                        placeholder="Seu cargo"
                                         className="w-full pl-10 p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1A3D7C] outline-none transition-all"
                                         onChange={handleInput}
                                     />
@@ -272,7 +272,7 @@ export default function BookingWizard() {
                                 required
                                 name="contato"
                                 type="text" 
-                                placeholder="WhatsApp ou E-mail Principal"
+                                placeholder="WhatsApp ou e-mail principal"
                                 className="w-full pl-10 p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#1A3D7C] outline-none transition-all"
                                 onChange={handleInput}
                             />
@@ -283,7 +283,7 @@ export default function BookingWizard() {
                             disabled={loading}
                             className="w-full bg-[#1A3D7C] text-white font-bold py-4 rounded-xl hover:bg-[#17386D] transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transform"
                         >
-                            {loading ? 'Processando...' : 'Ver Proposta e Falar com Consultor'}
+                            {loading ? 'Processando...' : 'Ver proposta e falar com consultor'}
                             {!loading && <ArrowRight size={20} />}
                         </button>
                         

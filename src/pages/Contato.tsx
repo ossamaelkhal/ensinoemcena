@@ -88,7 +88,7 @@ ${formData.mensagem}
         <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#FFD23F]/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-6">Entre em Contato</h1>
+          <h1 className="text-5xl font-bold mb-6">Entre em contato</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
              Quer levar a Ensino em Cena para sua escola? Estamos prontos para criar uma experiência inesquecível.
           </p>
@@ -102,7 +102,7 @@ ${formData.mensagem}
             {/* Coluna do Formulário */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
               <h2 className="text-3xl font-bold text-[#1A3D7C] mb-2">
-                Fale Conosco
+                Fale conosco
               </h2>
               <p className="text-gray-600 mb-8">
                 Preencha o formulário abaixo e nós redirecionaremos você para um atendimento personalizado no WhatsApp.
@@ -111,7 +111,7 @@ ${formData.mensagem}
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label htmlFor="tipo" className="block text-sm font-bold text-gray-700 mb-2">
-                    Assunto *
+                    Assunto*
                   </label>
                   <div className="relative">
                     <select
@@ -122,9 +122,9 @@ ${formData.mensagem}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1A3D7C] focus:border-transparent outline-none transition appearance-none bg-white"
                     >
-                        <option value="agendamento">Agendar Espetáculo</option>
-                        <option value="orcamento">Solicitar Orçamento</option>
-                        <option value="informacao">Dúvidas Pedagógicas</option>
+                        <option value="agendamento">Agendar espetáculo</option>
+                        <option value="orcamento">Solicitar orçamento</option>
+                        <option value="informacao">Dúvidas pedagógicas</option>
                         <option value="parceria">Parcerias</option>
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
@@ -135,7 +135,7 @@ ${formData.mensagem}
 
                 <div>
                   <label htmlFor="nome" className="block text-sm font-bold text-gray-700 mb-2">
-                    Seu Nome *
+                    Seu nome*
                   </label>
                   <input
                     type="text"
@@ -152,7 +152,7 @@ ${formData.mensagem}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">
-                      E-mail *
+                      E-mail*
                     </label>
                     <input
                       type="email"
@@ -168,7 +168,7 @@ ${formData.mensagem}
 
                   <div>
                     <label htmlFor="telefone" className="block text-sm font-bold text-gray-700 mb-2">
-                      Telefone / WhatsApp *
+                      Telefone / WhatsApp*
                     </label>
                     <input
                       type="tel"
@@ -185,7 +185,7 @@ ${formData.mensagem}
 
                 <div>
                   <label htmlFor="escola" className="block text-sm font-bold text-gray-700 mb-2">
-                    Escola / Instituição
+                    Escola / instituição
                   </label>
                   <input
                     type="text"
@@ -200,7 +200,7 @@ ${formData.mensagem}
 
                 <div>
                   <label htmlFor="mensagem" className="block text-sm font-bold text-gray-700 mb-2">
-                    Como podemos ajudar? *
+                    Como podemos ajudar?*
                   </label>
                   <textarea
                     id="mensagem"
@@ -218,7 +218,7 @@ ${formData.mensagem}
                   <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-4 rounded-xl flex items-center gap-3 animate-pulse">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                     <div>
-                        <p className="font-bold">Mensagem Recebida!</p>
+                        <p className="font-bold">Mensagem recebida!</p>
                         <p className="text-sm">Abrindo WhatsApp para finalizar...</p>
                     </div>
                   </div>
@@ -236,7 +236,7 @@ ${formData.mensagem}
                   {enviando ? 'Enviando...' : (
                     <>
                       <Send size={20} />
-                      Iniciar Conversa
+                      Iniciar conversa
                     </>
                   )}
                 </button>
@@ -250,14 +250,14 @@ ${formData.mensagem}
             {/* Coluna de Informações */}
             <div className="lg:pl-8 space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-[#1A3D7C] mb-6">Canais Diretos</h3>
+                <h3 className="text-2xl font-bold text-[#1A3D7C] mb-6">Canais diretos</h3>
                 <div className="space-y-4">
                     <a href={`https://wa.me/${whatsappNumber}`} target="_blank" className="flex items-center p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors group cursor-pointer border border-green-100">
                         <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mr-4 shadow-md group-hover:scale-110 transition-transform">
                             <Phone size={20} />
                         </div>
                         <div>
-                            <p className="text-xs text-green-600 font-bold uppercase">WhatsApp (Principal)</p>
+                            <p className="text-xs text-green-600 font-bold uppercase">WhatsApp (principal)</p>
                             <p className="text-lg font-bold text-gray-800">(31) 99187-3104</p>
                         </div>
                     </a>
@@ -275,7 +275,7 @@ ${formData.mensagem}
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-[#1A3D7C] mb-6">Onde Estamos</h3>
+                <h3 className="text-2xl font-bold text-[#1A3D7C] mb-6">Onde estamos</h3>
                  <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
                     <div className="flex items-start gap-4">
                          <div className="mt-1 text-[#FF6B6B]">
@@ -292,7 +292,7 @@ ${formData.mensagem}
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-[#1A3D7C] mb-6">Siga a Trupe</h3>
+                <h3 className="text-2xl font-bold text-[#1A3D7C] mb-6">Siga a trupe</h3>
                 <div className="flex gap-4">
                   <a
                     href="https://instagram.com/ensinoemcena"

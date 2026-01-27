@@ -11,21 +11,21 @@ export default function BenefitsSection() {
     },
     {
       icon: <ShieldCheck size={32} />,
-      title: 'Logística Simplificada',
+      title: 'Logística simplificada',
       description: 'Levamos toda a estrutura necessária. A escola só precisa ceder o espaço e os alunos.',
       color: 'text-green-600',
       bg: 'bg-green-100'
     },
     {
       icon: <Heart size={32} />,
-      title: 'Desenvolvimento Socioemocional',
+      title: 'Desenvolvimento socioemocional',
       description: 'Trabalhamos empatia, criatividade e expressão através da arte teatral.',
       color: 'text-red-600',
       bg: 'bg-red-100'
     },
     {
       icon: <Lightbulb size={32} />,
-      title: 'Experiência Memorável',
+      title: 'Experiência memorável',
       description: 'Uma vivência que marca a trajetória escolar e potencializa o aprendizado em sala de aula.',
       color: 'text-yellow-600',
       bg: 'bg-yellow-100'

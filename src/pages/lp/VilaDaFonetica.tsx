@@ -181,7 +181,7 @@ export default function LPVilaDaFonetica() {
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Leve a Vila da Fonética para sua escola</h2>
           <p className="text-xl text-blue-100 mb-10">
-            Agenda 2025 aberta com condições especiais para fechamento antecipado.
+            Agenda 2026 aberta com condições especiais para fechamento antecipado.
           </p>
           <a 
             href="https://wa.me/5531996739694?text=Vim%20pela%20LP%20Vila%20e%20quero%20cotacao" 

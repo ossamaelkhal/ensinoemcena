@@ -24,7 +24,7 @@ export default function Header() {
   const { toggleCart, cartCount } = useCart(); // Usando Carrinho
 
   const navigation = [
-    { name: 'Projeto de Leitura', path: '/projeto-leitura' },
+    { name: 'Projeto de leitura', path: '/projeto-leitura' },
     { name: 'Espetáculos', path: '/espetaculos' },
     { name: 'Ferramentas', path: '/ferramentas', highlight: true },
     { name: 'Sobre', path: '/sobre' },
@@ -80,7 +80,7 @@ export default function Header() {
               <Link
                 to="/portal"
                 className="flex items-center gap-2 text-sm font-semibold text-white hover:text-[#FFD23F] transition-colors hover:bg-white/10 px-3 py-2 rounded-lg whitespace-nowrap"
-                title="Área do Professor"
+                title="Área do professor"
               >
                 <UserCircle size={22} />
                 <span className="hidden 2xl:inline">Portal</span>

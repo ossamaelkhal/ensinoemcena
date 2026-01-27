@@ -76,7 +76,7 @@ export default function EspetaculoDetalhes() {
           <div className="container mx-auto px-4">
             <Link to="/espetaculos" className="inline-flex items-center text-white/80 hover:text-[#FFD23F] mb-6 transition-colors backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full text-sm">
               <ArrowLeft size={16} className="mr-2" />
-              Voltar ao Catálogo
+              Voltar ao catálogo
             </Link>
             <motion.h1 
               initial={{ y: 30, opacity: 0 }}
@@ -145,7 +145,7 @@ export default function EspetaculoDetalhes() {
              <section className="mb-12 bg-[#FFD23F]/10 rounded-2xl p-8 border border-[#FFD23F]/30">
               <h3 className="text-xl font-bold text-[#1A3D7C] mb-6 flex items-center gap-2">
                 <Star className="fill-[#FFD23F] text-[#FFD23F]" />
-                Diferenciais Exclusivos
+                Diferenciais exclusivos
               </h3>
               <ul className="space-y-3">
                 {espetaculo.diferenciais?.map((dif: string, i: number) => (
@@ -163,7 +163,7 @@ export default function EspetaculoDetalhes() {
             <div className="sticky top-24 space-y-6">
               <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
                 <div className="bg-[#1A3D7C] p-4 text-white text-center font-bold">
-                  Ficha Técnica Rápida
+                  Ficha técnica rápida
                 </div>
                 <div className="p-6 space-y-6">
                   <div className="flex items-center justify-between border-b border-gray-100 pb-4">
@@ -198,7 +198,7 @@ export default function EspetaculoDetalhes() {
                     to="/contato"
                     className="block w-full bg-[#FFD23F] hover:bg-[#FFCA45] text-[#1A3D7C] text-center font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all transform mb-3"
                   >
-                    Solicitar Orçamento
+                    Solicitar orçamento
                   </Link>
                   <button className="block w-full bg-white border border-gray-300 text-gray-600 font-semibold py-3 rounded-xl hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
                     <Share2 size={18} />

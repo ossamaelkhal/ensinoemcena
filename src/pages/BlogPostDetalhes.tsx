@@ -42,7 +42,7 @@ export default function BlogPostDetalhes() {
         
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 text-white container mx-auto">
           <Link to="/blog" className="inline-flex items-center text-white/80 hover:text-[#FFD23F] mb-6 transition-colors bg-black/20 backdrop-blur px-4 py-2 rounded-full text-sm">
-            <ArrowLeft size={16} className="mr-2" /> Voltar para o Blog
+            <ArrowLeft size={16} className="mr-2" /> Voltar para o blog
           </Link>
           
           <div className="flex flex-wrap gap-3 mb-6">
@@ -107,11 +107,11 @@ export default function BlogPostDetalhes() {
                 Gostou do tema?
               </h3>
               <p className="mb-6 text-blue-100">
-                Leve essa experiência prática para seus alunos. O Teatro Ensino em Cena transforma esses conceitos em vivência real.
+                Leve essa experiência prática para seus alunos. O teatro da Ensino em Cena transforma esses conceitos em vivência real.
               </p>
               
               <div className="bg-white/10 p-4 rounded-lg mb-6 border border-white/10">
-                <h4 className="font-bold text-white mb-2">Próximo Passo:</h4>
+                <h4 className="font-bold text-white mb-2">Próximo passo:</h4>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li className="flex items-center gap-2">✓ Agende uma visita</li>
                   <li className="flex items-center gap-2">✓ Receba o material pedagógico</li>
@@ -123,12 +123,12 @@ export default function BlogPostDetalhes() {
                 to="/contato"
                 className="block w-full bg-[#FFD23F] text-[#1A3D7C] text-center font-bold py-4 rounded-xl hover:bg-[#FFCA45] transition-colors shadow-lg"
               >
-                Falar com Consultor
+                Falar com consultor
               </Link>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-              <h4 className="font-bold text-gray-800 mb-4">Tags Relacionadas</h4>
+              <h4 className="font-bold text-gray-800 mb-4">Tags relacionadas</h4>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map(tag => (
                   <span key={tag} className="text-xs font-bold text-gray-600 bg-white border border-gray-200 px-3 py-1 rounded hover:border-[#1A3D7C] hover:text-[#1A3D7C] transition-colors cursor-pointer">

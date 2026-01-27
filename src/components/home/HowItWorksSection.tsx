@@ -5,21 +5,21 @@ export default function HowItWorksSection() {
     {
       id: 1,
       icon: <MessageSquare size={32} />,
-      title: 'Entre em Contato',
+      title: 'Entre em contato',
       description: 'Preencha nosso formulário ou chame no WhatsApp. Nossa equipe entende sua necessidade.',
       color: 'bg-[#FFD23F]'
     },
     {
       id: 2,
       icon: <CalendarCheck size={32} />,
-      title: 'Agende a Data',
+      title: 'Agende a data',
       description: 'Escolha o melhor dia e horário. Nós cuidamos de toda a logística e preparação.',
       color: 'bg-[#7A3EB1]'
     },
     {
       id: 3,
       icon: <Sparkles size={32} />,
-      title: 'O Espetáculo Acontece',
+      title: 'O espetáculo acontece',
       description: 'Levamos cenário, som, luz e elenco até sua escola. Seus alunos vivem a magia!',
       color: 'bg-[#FF6B6B]'
     }
@@ -29,7 +29,7 @@ export default function HowItWorksSection() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#1A3D7C]">Como Levar para Sua Escola</h2>
+          <h2 className="text-4xl font-bold text-[#1A3D7C]">Como levar para sua escola</h2>
           <p className="text-gray-600 mt-4 text-lg">Processo simples, ágil e sem burocracia.</p>
         </div>
 

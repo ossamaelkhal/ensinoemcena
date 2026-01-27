@@ -70,7 +70,7 @@ export default function Loja() {
             animate={{ y: 0, opacity: 1 }}
             className="text-4xl md:text-6xl font-bold text-white mb-4"
           >
-            Lojinha Pedagógica
+            Lojinha pedagógica
           </motion.h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Recursos didáticos, livros e lembranças para levar a magia do teatro para casa.
@@ -121,7 +121,7 @@ export default function Loja() {
                 <div className="relative h-64 overflow-hidden bg-gray-100">
                   {produto.destaque && (
                     <span className="absolute top-4 left-4 z-10 bg-[#FFD23F] text-[#1A3D7C] text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                      Mais Vendido
+                      Mais vendido
                     </span>
                   )}
                   <img

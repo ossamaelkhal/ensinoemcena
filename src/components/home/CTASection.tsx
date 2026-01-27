@@ -28,7 +28,7 @@ export default function CTASection() {
               to="/contato"
               className="bg-[#FFD23F] text-[#1A3D7C] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FFCA45] hover:scale-105 transition-all shadow-lg flex items-center justify-center gap-2"
             >
-              Solicitar Orçamento Agora
+              Solicitar orçamento agora
             </Link>
             <a
               href="https://wa.me/5511999999999" // Replace with actual WhatsApp link

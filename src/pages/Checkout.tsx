@@ -78,7 +78,7 @@ ${data.endereco}
         <h2 className="text-2xl font-bold text-gray-700 mt-4">Seu carrinho está vazio.</h2>
         <p className="text-gray-500 mb-6">Volte para a loja para adicionar produtos.</p>
         <a href="/loja" className="bg-[#1A3D7C] text-white px-6 py-2 rounded-lg font-bold hover:bg-[#2a55a3] transition-colors">
-            Ir para a Loja
+            Ir para a loja
         </a>
       </div>
     );
@@ -91,13 +91,13 @@ ${data.endereco}
         animate={{ opacity: 1, y: 0 }}
         className="container mx-auto max-w-4xl"
       >
-        <h1 className="text-4xl font-bold text-[#1A3D7C] text-center mb-10">Finalizar Compra</h1>
+        <h1 className="text-4xl font-bold text-[#1A3D7C] text-center mb-10">Finalizar compra</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Formulário de Dados */}
           <div className="bg-white p-8 rounded-2xl shadow-lg order-2 lg:order-1">
             <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-              <User size={22} /> Seus Dados para Entrega
+              <User size={22} /> Seus dados para entrega
             </h2>
             <form onSubmit={handleFinishOrder} className="space-y-4">
               <div className="relative">
@@ -168,7 +168,7 @@ ${data.endereco}
                   <span className="font-bold">A combinar</span>
               </div>
               <div className="flex justify-between font-bold text-xl text-[#1A3D7C] pt-4 border-t border-gray-100">
-                <p>Total Estimado</p>
+                <p>Total estimado</p>
                 <p>R$ {cartTotal.toFixed(2)}</p>
               </div>
             </div>

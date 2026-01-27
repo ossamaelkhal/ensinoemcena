@@ -168,7 +168,7 @@ export default function PlataformaTeaser() {
                   <button 
                     onClick={() => setMessages([messages[0], messages[1]])} 
                     className="text-white/70 hover:text-white transition-colors p-2"
-                    title="Reiniciar Conversa"
+                    title="Reiniciar conversa"
                   >
                     <RefreshCw size={18} />
                   </button>
@@ -204,7 +204,7 @@ export default function PlataformaTeaser() {
                                         ))}
                                     </div>
                                     <a href={`/espetaculos/${msg.product.slug}`} className="block w-full bg-[#1A3D7C] text-white text-center text-xs font-bold py-2 rounded hover:bg-[#17386D] transition-colors">
-                                        Ver Detalhes
+                                        Ver detalhes
                                     </a>
                                 </div>
                             </motion.div>

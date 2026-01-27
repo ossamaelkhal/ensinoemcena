@@ -28,7 +28,7 @@ const CardElenco = ({ membro }: { membro: MembroElenco }) => {
           <div className="p-6 h-2/5 flex flex-col justify-between bg-white">
             <div>
               <h3 className="text-2xl font-bold text-[#1A3D7C]">{membro.nome}</h3>
-              <p className="text-sm text-[#7A3EB1] font-medium mb-3">{membro.funcao || 'Artista & Educador'}</p>
+              <p className="text-sm text-[#7A3EB1] font-medium mb-3">{membro.funcao || 'Artista & educador'}</p>
             </div>
             <div className="flex flex-wrap gap-2">
               {membro.especialidades?.slice(0, 3).map((esp, i) => (
@@ -46,7 +46,7 @@ const CardElenco = ({ membro }: { membro: MembroElenco }) => {
           <div className="mb-4 bg-white/10 p-4 rounded-full">
             <Star className="text-[#FFD23F] w-8 h-8" />
           </div>
-          <h4 className="text-xl font-bold mb-4 text-[#FFD23F]">Sobre o Artista</h4>
+          <h4 className="text-xl font-bold mb-4 text-[#FFD23F]">Sobre o artista</h4>
           <p className="text-sm leading-relaxed text-gray-100 mb-6">"{membro.biografia}"</p>
           <button className="text-xs font-bold uppercase tracking-widest text-[#FFD23F]">Voltar</button>
         </div>
@@ -75,7 +75,7 @@ export default function Elenco() {
       <section className="bg-gradient-to-br from-[#1A3D7C] to-[#0f244a] text-white py-24 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Nosso Elenco</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Nosso elenco</h1>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto font-light">
               Conheça os artistas-educadores que transformam o palco em sala de aula.
             </p>

@@ -55,7 +55,7 @@ export default function Espetaculos() {
             <AlertCircle size={48} className="text-red-500 mb-4" />
             <h2 className="text-xl font-bold text-gray-800">Ops! Algo deu errado.</h2>
             <p className="text-gray-600 mb-4">Não conseguimos carregar os espetáculos no momento.</p>
-            <button onClick={() => window.location.reload()} className="bg-[#1A3D7C] text-white px-6 py-2 rounded-lg">Tentar Novamente</button>
+            <button onClick={() => window.location.reload()} className="bg-[#1A3D7C] text-white px-6 py-2 rounded-lg">Tentar novamente</button>
         </div>
       );
   }
@@ -74,7 +74,7 @@ export default function Espetaculos() {
             transition={{ duration: 0.7 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight"
           >
-            Nossos Espetáculos
+            Nossos espetáculos
           </motion.h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-10 font-light">
             Descubra obras que unem a magia do teatro com a precisão da BNCC.
@@ -160,7 +160,7 @@ export default function Espetaculos() {
                     className="w-full bg-white border-2 border-[#1A3D7C] text-[#1A3D7C] py-3 rounded-xl font-bold text-center group-hover:bg-[#1A3D7C] group-hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <Search size={18} />
-                    Ver Detalhes
+                    Ver detalhes
                   </Link>
                 </div>
               </motion.div>
