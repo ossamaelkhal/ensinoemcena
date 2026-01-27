@@ -348,7 +348,7 @@ Implementar para cada tipo de página:
   "url": "https://ensinoemcena.com.br",
   "logo": "URL_LOGO",
   "sameAs": [
-    "https://facebook.com/ensinoemcena",
+    "https://www.facebook.com/ensinoemcenaoficial",
     "https://instagram.com/ensinoemcena",
     "https://youtube.com/@ensinoemcena"
   ]

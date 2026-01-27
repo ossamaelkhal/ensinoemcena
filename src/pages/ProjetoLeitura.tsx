@@ -53,7 +53,7 @@ export default function ProjetoLeitura() {
       titulo: "A culminância no teatro",
       publico: "Escola completa",
       icon: Theater,
-      descricao: "Chegou o grande dia! Recbemos a escola no teatro para assistir à peça profissional 'Vila da Fonética'. Nesse momento, os estudantes convivem com iluminação, sonoplastia, os atores e magia do teatro, onde se é consolidado o aprendizado das oxítonas, paroxítonas, paroxítonas e separação de sílabas.",
+      descricao: "Chegou o grande dia! Recbemos a escola no teatro para assistir à peça profissional 'Vila da Fonética'. Nesse momento, os estudantes convivem com iluminação, sonoplastia, os atores e magia do teatro, onde se é consolidado o aprendizado das oxítonas, paroxítonas, proparoxítonas e separação de sílabas.",
       detalhe: "Olhos brilhando e interação total."
     }
   ];
@@ -80,7 +80,7 @@ export default function ProjetoLeitura() {
             className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           >
             Projeto de leitura e escrita <br/>
-            <span className="text-[#FFD23F]">Da Imaginação ao Palco</span>
+            <span className="text-[#FFD23F]">Da imaginação ao palco</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -165,7 +165,7 @@ export default function ProjetoLeitura() {
         </div>
       </section>
 
-      {/* Família e Legado */}
+      {/* Família e legado */}
       <section className="py-20 bg-gradient-to-br from-[#7A3EB1] to-[#5a2d82] text-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
@@ -192,7 +192,7 @@ export default function ProjetoLeitura() {
                 <div className="bg-[#1A3D7C] p-4 rounded-full text-white">
                   <Download size={24} />
                 </div>
-                <h2 className="text-2xl font-bold text-[#1A3D7C]">O Legado para a escola</h2>
+                <h2 className="text-2xl font-bold text-[#1A3D7C]">O legado para a escola</h2>
               </div>
               <p className="text-gray-600 mb-6">
                 O projeto não acaba quando vamos embora. Deixamos um material rico para que os professores continuem o trabalho:

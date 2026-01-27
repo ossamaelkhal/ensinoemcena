@@ -88,10 +88,10 @@ export default function Footer() {
               <a href="https://facebook.com/ensinoemcena" target="_blank" className="hover:text-[#FFD23F] transition-colors"><Facebook size={24} /></a>
               <a href="https://instagram.com/ensinoemcena" target="_blank" className="hover:text-[#FFD23F] transition-colors"><Instagram size={24} /></a>
               <a href="https://youtube.com/@ensinoemcena" target="_blank" className="hover:text-[#FFD23F] transition-colors"><Youtube size={24} /></a>
-              <a href="https://www.tiktok.com/@ensinoemcenabh" target="_blank" className="hover:text-[#FFD23F] transition-colors"><TikTokIcon size={24} /></a>
+              <a href="https://www.tiktok.com/@ensinoemcena" target="_blank" className="hover:text-[#FFD23F] transition-colors"><TikTokIcon size={24} /></a>
             </div>
             <p className="mt-4 text-sm text-gray-400">@ensinoemcena</p>
-            <p className="text-sm text-gray-400">TikTok: @ensinoemcenabh</p>
+            <p className="text-sm text-gray-400">TikTok: @ensinoemcena</p>
           </div>
         </div>
 

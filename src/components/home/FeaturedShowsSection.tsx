@@ -61,7 +61,7 @@ export default function FeaturedShowsSection() {
                 </div>
 
                 <p className="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed flex-grow">
-                  Uma aventura lúdica na qual vogais e consoantes enfrentam traças para salvarem a literatura
+                  Uma aventura lúdica na qual as vogais e as consoantes enfrentam traças para salvar a literatura.
                 </p>
                 
                 <Link
